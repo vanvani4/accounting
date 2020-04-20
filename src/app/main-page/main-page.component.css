@@ -1,0 +1,110 @@
+/* First screen header-menu  */
+
+.header {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/img/bg-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    padding-right: 100px;
+    position: relative;
+}
+
+.menu-item {
+    margin-right: 30px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.company-title {
+    padding-top: 220px;
+    text-align: center;
+}
+
+.company-description {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.8px;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 20px;
+}
+
+
+/* Second screen news */
+
+.news {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.row-reverse {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+
+.title-news {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 20px;
+}
+
+.news-description {
+    color: #81868e;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.7px;
+    padding-left: 5%;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.all-news {
+    width: 130px;
+    height: 37px;
+    border-radius: 19px;
+    border: 1px solid #333b46;
+    background-color: #ffffff;
+    margin-left: 5%;
+}
+
+.all-news a {
+    color: #333b46;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.test {
+    width: 50%;
+}
+
+
+/* .img-news {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+} */

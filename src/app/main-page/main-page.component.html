@@ -1,0 +1,30 @@
+<header class="header">
+    <ul class="menu">
+        <li *ngFor="let item of menu">
+            <a class="menu-item" href="#">{{ item.name }}</a>
+        </li>
+    </ul>
+
+    <div>
+        <h1 class="company-title">Ми керуюча компанія</h1>
+        <p class="company-description">
+            Компанія «Мій дім» заснована 2 вересня 2016 року з метою створення прикладу якісного професійного обслуговування багатоквартирного будинку на максимально прозорою і оптимізованої основі.
+        </p>
+    </div>
+</header>
+
+<section *ngFor="let item of news" class="news ">
+    <div сlass="test">
+        <h2 class="title-news">{{ item.title }}</h2>
+        <p class="news-description">
+            {{ item.description }}
+        </p>
+        <button class="all-news">
+            <a href=" {{ item.link }}" target="_blank">Читати більше</a>
+        </button>
+    </div>
+
+    <div>
+        <img class="img-news" src="{{ item.image }}" alt="news image">
+    </div>
+</section>
