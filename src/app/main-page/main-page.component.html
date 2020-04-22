@@ -13,18 +13,22 @@
     </div>
 </header>
 
-<section *ngFor="let item of news" class="news ">
-    <div сlass="test">
-        <h2 class="title-news">{{ item.title }}</h2>
-        <p class="news-description">
-            {{ item.description }}
-        </p>
-        <button class="all-news">
-            <a href=" {{ item.link }}" target="_blank">Читати більше</a>
-        </button>
-    </div>
-
-    <div>
-        <img class="img-news" src="{{ item.image }}" alt="news image">
-    </div>
+<section class="news">
+    <mat-card *ngFor="let item of news" class="news-card" fxLayout="row">
+        <mat-card-header>
+            <div mat-card-avatar class="news-header-image"></div>
+            <mat-card-title>{{item.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{item.image}}" alt="news image">
+        <mat-card-content>
+            <p class="news-description">
+                {{item.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>
+                <a class="all-news" href="{{ item.link }}" target="_blank">Читати більше</a>
+            </button>
+        </mat-card-actions>
+    </mat-card>
 </section>

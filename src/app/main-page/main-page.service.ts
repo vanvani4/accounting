@@ -30,6 +30,20 @@ export class MainPageService {
       description: 'Через карантин українці змушені економити на всьому, зокрема, на оплаті житлово-комунальних послуг. Багато українців опинилися без роботи, тож просто не мають чим платити.',
       link: 'https://24tv.ua/komunalni_poslugi_skilki_zaborguvali_ukrayintsi_n1329267',
       image: '../../assets/img/img-news-2.webp'
+    },
+    {
+      id: 3,
+      title: 'До уваги керівників ОСББ: рекомендації з дезінфекції. Відеокоментар',
+      description: 'Рекомендації щодо оптимізації заходів з протидії COVID-19 на об’єктах житлового господарства',
+      link: 'https://omr.gov.ua/ua/news/housing/',
+      image: '../../assets/img/img-news-3.jpg'
+    },
+    {
+      id: 4,
+      title: 'В Одесі тимчасово припинить роботу бювет у Старобазарному сквері',
+      description: 'Бюветний комплекс у Старобазарному сквері закритий до 16 квітня',
+      link: 'https://omr.gov.ua/ua/news/219387/',
+      image: '../../assets/img/img-news-4.jpg'
     }
   ]
 
