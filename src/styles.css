@@ -24,12 +24,16 @@ h1 {
     letter-spacing: 7px;
 }
 
-h2 {
-    font-family: "Source Sans Pro";
-}
-
 a {
     text-decoration: none;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
