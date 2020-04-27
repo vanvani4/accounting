@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MainPageService } from './main-page.service';
 import { Menu } from '../models/menu';
 import { News } from '../models/news';
+import { log } from 'util';
 
 @Component({
   selector: 'app-main-page',
@@ -10,23 +11,24 @@ import { News } from '../models/news';
 })
 export class MainPageComponent implements OnInit {
 
-  menu: Menu[];
+  menu: Menu[] = [
+    { id: 1, name: 'Головна', link: '/main' },
+    { id: 2, name: 'Новини', link: 'news' },
+    { id: 3, name: 'Про нас', link: '#' },
+    { id: 4, name: 'Мій кабінет', link: '#' },
+  ];
+  
   news: News[];
 
   constructor(private mainPageService: MainPageService) { }
 
   ngOnInit(): void {
-    this.getMenu();
+    // this.getMenu();
     this.getNews();
   }
 
-  getMenu(): void {
-    this.menu = this.mainPageService.getMenu();
-  }
-
   getNews(): void {
-    this.news = this.mainPageService.getNews();
-    console.log(this.news);
+    this.mainPageService.getNews()
+      .subscribe(news => (this.news = news));
   }
-
 }
