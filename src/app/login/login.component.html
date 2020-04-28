@@ -1,0 +1,14 @@
+<div class="login-form">
+    <h2 class="title">Вхід в особистий кабінет</h2>
+    <mat-form-field class="email" appearance="outline">
+        <mat-label>Введіть свою електронну пошту</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorEmail()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="password" appearance="outline">
+        <mat-label>Введіть свій пароль</mat-label>
+        <input matInput placeholder="******" [formControl]="password" required>
+        <mat-error *ngIf="password.invalid">{{getErrorPassword()}}</mat-error>
+    </mat-form-field>
+</div>

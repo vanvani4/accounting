@@ -14,7 +14,7 @@ export class MainPageComponent implements OnInit {
     { id: 1, name: 'Головна', link: '/main' },
     { id: 2, name: 'Новини', link: 'news' },
     { id: 3, name: 'Про нас', link: '#' },
-    { id: 4, name: 'Мій кабінет', link: '#' },
+    { id: 4, name: 'Мій кабінет', link: 'login' },
   ];
   
   news: News[];
