@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MainPageService } from './main-page.service';
 import { Menu } from '../models/menu';
 import { News } from '../models/news';
-import { log } from 'util';
 
 @Component({
   selector: 'app-main-page',
@@ -23,7 +22,6 @@ export class MainPageComponent implements OnInit {
   constructor(private mainPageService: MainPageService) { }
 
   ngOnInit(): void {
-    // this.getMenu();
     this.getNews();
   }
 
