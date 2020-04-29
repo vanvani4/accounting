@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { News } from '../models/news';
+import { Menu } from '../models/menu';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -12,9 +13,20 @@ import { MessageService } from '../message.service';
 })
 export class MainPageService {
 
+  menu: Menu[] = [
+    { id: 1, name: 'Головна', link: 'main' },
+    { id: 2, name: 'Новини', link: 'news' },
+    { id: 3, name: 'Про нас', link: '#' },
+    { id: 4, name: 'Мій кабінет', link: 'admin' },
+  ];
+
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
+
+  getMenu() {
+    return this.menu;
+  }
 
   getNews(): Observable<News[]> {
     return this.http.get<News[]>('http://localhost:3000/')

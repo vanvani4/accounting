@@ -1,0 +1,33 @@
+<mat-tab-group>
+
+    <mat-tab label="Головна сторінка">
+        <ng-template matTabContent>
+            <mat-drawer-container class="example-container" autosize>
+
+                <mat-drawer #drawer class="example-sidenav" mode="side">
+                    <div>
+                        <label>Meню:
+                            <input [(ngModel)]="mainPageService.menu[0].name" placeholder="Meню"/>
+                        </label>
+                    </div>
+
+                </mat-drawer>
+
+                <div class="example-sidenav-content">
+                    <button type="button" mat-button (click)="drawer.toggle()">
+                        Редагувати сторінку
+                    </button>
+                    <app-main-page></app-main-page>
+                </div>
+
+            </mat-drawer-container>
+        </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Кабінет нарахувань">
+        <ng-template matTabContent>
+
+        </ng-template>
+    </mat-tab>
+
+</mat-tab-group>

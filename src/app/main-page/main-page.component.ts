@@ -9,24 +9,23 @@ import { News } from '../models/news';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
-  menu: Menu[] = [
-    { id: 1, name: 'Головна', link: '/main' },
-    { id: 2, name: 'Новини', link: 'news' },
-    { id: 3, name: 'Про нас', link: '#' },
-    { id: 4, name: 'Мій кабінет', link: 'login' },
-  ];
   
   news: News[];
+  menu: Menu[];
 
   constructor(private mainPageService: MainPageService) { }
 
   ngOnInit(): void {
     this.getNews();
+    this.getMenu();
   }
 
   getNews(): void {
     this.mainPageService.getNews()
       .subscribe(news => (this.news = news));
+  }
+
+  getMenu(): void {
+    this.menu = this.mainPageService.getMenu();
   }
 }
