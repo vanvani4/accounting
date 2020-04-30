@@ -13,6 +13,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { NewsEditorComponent } from './admin/news-editor/news-editor.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AdminComponent } from './admin/admin.component';
     MainPageComponent,
     MessagesComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    NewsEditorComponent
   ],
   imports: [
     BrowserModule,

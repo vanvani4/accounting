@@ -8,6 +8,10 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { TextFieldModule } from '@angular/cdk/text-field';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -19,7 +23,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatBottomSheetModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    TextFieldModule,
+    MatExpansionModule,
+    MatDividerModule,
+    MatListModule
   ],
   exports: [
     MatGridListModule,
@@ -30,7 +38,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatBottomSheetModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    TextFieldModule,
+    MatExpansionModule,
+    MatDividerModule,
+    MatListModule
   ]
 })
 export class MaterialModule {}

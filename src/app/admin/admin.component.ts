@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
 import { MainPageService } from '../main-page/main-page.service';
-import { log } from 'util';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { take } from 'rxjs/operators';
 
 
 @Component({
@@ -10,12 +11,21 @@ import { log } from 'util';
 })
 export class AdminComponent implements OnInit {
 
-  showFiller = false;
+  panelOpenState = false;
 
-  constructor(public mainPageService: MainPageService) { }
+  constructor(
+    public mainPageService: MainPageService,
+    private _ngZone: NgZone
+  ) { }
 
   ngOnInit(): void {
-    console.log(this.mainPageService.menu[0].name);
+  }
+
+  @ViewChild('autosize') autosize: CdkTextareaAutosize;
+
+  triggerResize() {
+    this._ngZone.onStable.pipe(take(1))
+      .subscribe(() => this.autosize.resizeToFitContent(true));
   }
 
 }

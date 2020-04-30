@@ -13,11 +13,12 @@ export class MainPageComponent implements OnInit {
   news: News[];
   menu: Menu[];
 
-  constructor(private mainPageService: MainPageService) { }
+  constructor(public mainPageService: MainPageService) { }
 
   ngOnInit(): void {
     this.getNews();
     this.getMenu();
+    
   }
 
   getNews(): void {

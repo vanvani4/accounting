@@ -20,6 +20,9 @@ export class MainPageService {
     { id: 4, name: 'Мій кабінет', link: 'admin' },
   ];
 
+  companyTitle: string = 'Ми керуюча компанія';
+  companyDescription: string = 'Компанія «Мій дім» заснована 2 вересня 2016 року з метою створення прикладу якісного професійного обслуговування багатоквартирного будинку на максимально прозорою і оптимізованої основі.'
+
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }

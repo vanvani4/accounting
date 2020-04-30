@@ -1,19 +1,58 @@
 <mat-tab-group>
 
-    <mat-tab label="Головна сторінка">
+    <mat-tab label="Пананель редагування головної сторінки">
         <ng-template matTabContent>
-            <mat-drawer-container class="example-container" autosize>
+            <mat-drawer-container autosize>
 
-                <mat-drawer #drawer class="example-sidenav" mode="side">
-                    <div>
-                        <label>Meню:
-                            <input [(ngModel)]="mainPageService.menu[0].name" placeholder="Meню"/>
-                        </label>
-                    </div>
+                <!--  Editor container -->
+                <mat-drawer #drawer mode="side">
+
+                    <mat-accordion>
+
+                        <!-- Title editor -->
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Редагувати Заголовок
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field class="editor">
+                                <mat-label>Заголовок</mat-label>
+                                <input matInput [(ngModel)]="mainPageService.companyTitle">
+                            </mat-form-field>
+                        </mat-expansion-panel>
+
+                        <!-- Discription editor -->
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Редагувати Опис
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field class="editor">
+                                <mat-label>Опис</mat-label>
+                                <textarea matInput [(ngModel)]="mainPageService.companyDescription"></textarea>
+                            </mat-form-field>
+                        </mat-expansion-panel>
+                        <!-- News editor -->
+                        <mat-expansion-panel>
+
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Редагувати Новини
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <app-news-editor></app-news-editor>
+
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
 
                 </mat-drawer>
-
-                <div class="example-sidenav-content">
+                <div>
                     <button type="button" mat-button (click)="drawer.toggle()">
                         Редагувати сторінку
                     </button>
