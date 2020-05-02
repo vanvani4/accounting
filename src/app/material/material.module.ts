@@ -12,6 +12,8 @@ import { TextFieldModule } from '@angular/cdk/text-field';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 @NgModule({
   imports: [
@@ -27,7 +29,8 @@ import { MatListModule } from '@angular/material/list';
     TextFieldModule,
     MatExpansionModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   exports: [
     MatGridListModule,
@@ -42,7 +45,9 @@ import { MatListModule } from '@angular/material/list';
     TextFieldModule,
     MatExpansionModule,
     MatDividerModule,
-    MatListModule
-  ]
+    MatListModule,
+    MatDialogModule
+  ],
+  providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },],
 })
 export class MaterialModule {}

@@ -14,7 +14,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewsEditorComponent } from './admin/news-editor/news-editor.component';
-
+import { NewsEditorDialogComponent } from './admin/news-editor-dialog/news-editor-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { NewsEditorComponent } from './admin/news-editor/news-editor.component';
     MessagesComponent,
     LoginComponent,
     AdminComponent,
-    NewsEditorComponent
+    NewsEditorComponent,
+    NewsEditorDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +36,9 @@ import { NewsEditorComponent } from './admin/news-editor/news-editor.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    NewsEditorComponent
+  ],
 })
 export class AppModule { }

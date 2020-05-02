@@ -1,3 +1,0 @@
-[0429/150226.816:ERROR:file_io_win.cc(179)] CreateFile C:\Users\Р†РѕСЂРґР°РЅРѕРІР†Р†\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Отказано в доступе. (0x5)
-[0429/150226.816:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Канал был закрыт. (0x6D)
-[0429/150226.816:ERROR:file_io_win.cc(179)] CreateFile C:\Users\Р†РѕСЂРґР°РЅРѕРІР†Р†\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Отказано в доступе. (0x5)

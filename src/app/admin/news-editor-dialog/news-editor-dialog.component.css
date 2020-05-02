@@ -1,0 +1,13 @@
+.title {
+    color: black;
+}
+
+.conatiner {
+    width: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.textarea {
+    width: 300px;
+}
