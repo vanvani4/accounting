@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -33,7 +34,8 @@ import { NewsEditorDialogComponent } from './admin/news-editor-dialog/news-edito
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialFileInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
