@@ -13,13 +13,13 @@
                         <mat-expansion-panel>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    Редагувати Заголовок
+                                    Заголовок
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
 
                             <mat-form-field class="editor">
                                 <mat-label>Заголовок</mat-label>
-                                <input matInput [(ngModel)]="mainPageService.companyTitle">
+                                <input matInput [(ngModel)]="mainPageService.company.title">
                             </mat-form-field>
                         </mat-expansion-panel>
 
@@ -27,13 +27,13 @@
                         <mat-expansion-panel>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    Редагувати Опис
+                                    Підзаголовок
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
 
                             <mat-form-field class="editor">
-                                <mat-label>Опис</mat-label>
-                                <textarea matInput [(ngModel)]="mainPageService.companyDescription"></textarea>
+                                <mat-label>Підзаголовок</mat-label>
+                                <textarea matInput [(ngModel)]="mainPageService.company.subtitle"></textarea>
                             </mat-form-field>
                         </mat-expansion-panel>
                         <!-- News editor -->
@@ -41,11 +41,42 @@
 
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    Редагувати Новини
+                                    Новини
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
 
                             <app-news-editor></app-news-editor>
+
+                        </mat-expansion-panel>
+
+                        <!-- About company editor -->
+                        <mat-expansion-panel>
+
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Інформація про компанію
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field class="editor">
+                                <mat-label>Слоган</mat-label>
+                                <textarea matInput [(ngModel)]="mainPageService.company.tagline"></textarea>
+                            </mat-form-field>
+
+                            <mat-form-field class="editor">
+                                <mat-label>Про нас (1 вкладка)</mat-label>
+                                <textarea matInput [(ngModel)]="mainPageService.company.aboutUsFirst"></textarea>
+                            </mat-form-field>
+
+                            <mat-form-field class="editor">
+                                <mat-label>Про нас (2 вкладка)</mat-label>
+                                <textarea matInput [(ngModel)]="mainPageService.company.aboutUsSecond"></textarea>
+                            </mat-form-field>
+
+                            <mat-form-field class="editor">
+                                <mat-label>Про нас (3 вкладка)</mat-label>
+                                <textarea matInput [(ngModel)]="mainPageService.company.aboutUsThird"></textarea>
+                            </mat-form-field>
 
                         </mat-expansion-panel>
 
